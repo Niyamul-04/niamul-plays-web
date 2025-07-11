@@ -98,9 +98,6 @@ body, html {
      background-color: #0056b3;
 }
 
-
-
-
 .feedback-section {
   text-align: center;
   max-width: 1200px;
@@ -120,6 +117,9 @@ body, html {
   margin-bottom: 50px;
   text-shadow: 0 2px 4px rgba(0,0,0,0.3);
 }
+.stars{
+    
+}
 
 /* Ensure font on the cards */
 .review-card h3, 
@@ -128,7 +128,7 @@ body, html {
 .reviewer-name, 
 .reviewer-title, 
 .reviewer-date {
-  font-family: 'Poppins', 'Roboto', sans-serif;
+  font-family: 'Times New Roman', Times, serif;
 }
 
 .reviews {
@@ -162,13 +162,20 @@ body, html {
   font-size: 1px;
   margin-bottom: 2px;
   letter-spacing: 2px;
+
+  display: flex;
+  justify-content: center; 
+  align-items: center;    
+  margin-bottom: 15px;
+
 }
 
 .stars img {
   width: 16px;
   height: 16px;
   margin-right: 2px;
-  vertical-align: middle;
+  vertical-align: middle ;
+  align-content: center;
 }
 
 .review-text {
@@ -176,7 +183,7 @@ body, html {
   font-size: 1.1rem;
   line-height: 1.6;
   margin-bottom: 20px;
-  font-style: italic;
+  font-style: inherit;
 }
 
 .reviewer {
@@ -217,8 +224,6 @@ body, html {
 }
 
 
-
-
 /* Action Section Styles */
 
 .action-section-container {
@@ -298,93 +303,7 @@ body, html {
   }
 }
 
-
-
-
-
-
-
-/* Action Section Styles */
-
-.action-section-container {
-  padding: 60px 20px;
-  background-color: #fff; 
-  color: #fff;
-}
-
-.action-section {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
- width: 1140px;
- height: 328px;
-  margin: 0 auto;
-  gap: 40px;
-  flex-wrap: wrap;
-}
-
-
-.action-content {
-  flex: 1;
-  min-width: 300px;
-}
-
-.action-title {
-  font-size: 36px;
-  font-weight: 700;
-  margin-bottom: 20px;
-  color: #111;
-}
-
-.action-subtitle {
-  font-size: 18px;
-  line-height: 1.6;
-  margin-bottom: 30px;
-  color: #444;
-}
-
-.action-button {
-  padding: 12px 24px;
-  background-color: #007bff;
-  color: white;
-  font-weight: 600;
-  border: none;
-  border-radius: 6px;
-  cursor: pointer;
-  text-decoration: none;
-  display: inline-block;
-  transition: background-color 0.3s ease;
-}
-
-.action-button:hover {
-  background-color: #0056b3;
-}
-
-.action-image-wrapper {
-  flex: 1;
-  text-align: center;
-  min-width: 300px;
-}
-
-.action-image {
-  max-width: 100%;
-  height: auto;
-  border-radius: 30px;
-}
-
-@media (max-width: 768px) {
-  .action-section {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .action-content, .action-image-wrapper {
-    width: 100%;
-  }
-}
-
-/* 🔵 Productive Users Section */
-
+/* productive */
 .productive-users-section-outer {
   width: 100%;
   background-color: white;
@@ -440,7 +359,7 @@ body, html {
   text-transform: capitalize;
 }
 
-/* 🔁 Responsive Design */
+/*  Responsive Design */
 @media (max-width: 768px) {
   .data-grid {
     flex-direction: column;
@@ -470,7 +389,7 @@ body, html {
   }
 }
 
-/*Contact Section Two-Column Layout */
+/*Contact Section  */
 .contact-section-outer {
   width: 100%;
   background-color: #eef2f8;
@@ -496,7 +415,6 @@ body, html {
   text-decoration: underline;
 }
 
-/* Left side – title */
 .contact-title-block {
   flex: 1;
   min-width: 280px;
@@ -511,7 +429,6 @@ body, html {
   line-height: 1.3;
 }
 
-/* Right side – form */
 .contact-form-block {
   flex: 1;
   min-width: 300px;

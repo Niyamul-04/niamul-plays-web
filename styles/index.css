@@ -392,4 +392,24 @@ body, html {
   }
 }
 
+
+Common button transition effect
+.signup-btn,
+.focus-btn,
+.action-button,
+.submit-button {
+  transition: all 0.3s ease;
+  transform: scale(1);
+}
+
+/* Hover effect: color + slight grow */
+.signup-btn:hover,
+.focus-btn:hover,
+.action-button:hover,
+.submit-button:hover {
+  background-color: #362ccf; /* or use a darker shade as per context */
+  transform: scale(1.05);
+  box-shadow: 0 6px 20px rgba(75, 64, 247, 0.3);
+}
+
  

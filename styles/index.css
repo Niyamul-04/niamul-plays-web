@@ -393,23 +393,162 @@ body, html {
 }
 
 
-Common button transition effect
+/* 🔁 Common button transition effect */
 .signup-btn,
 .focus-btn,
 .action-button,
-.submit-button {
+.submit-button,
+.footer-link-item {
   transition: all 0.3s ease;
   transform: scale(1);
+  text-decoration: none; /* link underline remove */
+  color: #ffffff; /* default link color */
 }
 
-/* Hover effect: color + slight grow */
+/* 🎯 Hover effect: color + slight grow */
 .signup-btn:hover,
 .focus-btn:hover,
 .action-button:hover,
-.submit-button:hover {
-  background-color: #362ccf; /* or use a darker shade as per context */
+.submit-button:hover,
+.footer-link-item:hover {
+  background-color: #362ccf; /* background for buttons, not for links */
   transform: scale(1.05);
   box-shadow: 0 6px 20px rgba(75, 64, 247, 0.3);
+  color: #ffeb3b; /* hover link color */
 }
 
- 
+/* যদি শুধু footer link এর জন্য আলাদা hover চাও */
+.footer-link-item:hover {
+  color: #ffeb3b; /* yellow on hover */
+  text-shadow: 0 0 8px rgba(255, 235, 59, 0.6);
+  transform: scale(1.1);
+}
+
+
+
+.main-footer {
+    width: 100%;
+    min-height: 428px;
+    background-color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 20px;
+    box-sizing: border-box;
+}
+
+/* Container inside footer to control max width */
+.footer-container {
+    max-width: 1440px;
+    width: 100%;
+    min-height: calc(428px - 40px); /* accounts for outer padding */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+/* Logo */
+.footer-logo {
+    font-size: 3.5rem;
+    font-weight: 800;
+    color: #6a5eff;
+    margin-bottom: 25px;
+    line-height: 1;
+}
+
+/* Subtitle */
+.footer-subtitle {
+    max-width: 600px;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #606060;
+    margin-bottom: 35px;
+}
+
+/* Navigation links */
+.footer-nav {
+    width: 100%;
+}
+
+.footer-links {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-link-item {
+    text-decoration: none;
+    color: #4a5568;
+    font-size: 1.1rem;
+    font-weight: 600;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+/* Hover effect on links */
+.footer-link-item:hover {
+    color: #6a5eff;
+    transform: scale(1.1);
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+    .main-footer {
+        min-height: auto;
+        padding: 60px 20px;
+    }
+    .footer-container {
+        min-height: auto;
+    }
+    .footer-logo {
+        font-size: 3rem;
+    }
+    .footer-subtitle {
+        font-size: 1rem;
+        margin-bottom: 30px;
+    }
+    .footer-links {
+        gap: 25px;
+    }
+    .footer-link-item {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .main-footer {
+        padding: 50px 15px;
+    }
+    .footer-logo {
+        font-size: 2.8rem;
+        margin-bottom: 20px;
+    }
+    .footer-subtitle {
+        font-size: 0.95rem;
+        margin-bottom: 25px;
+    }
+    .footer-links {
+        flex-direction: column;
+        gap: 15px;
+    }
+    .footer-link-item {
+        font-size: 1.05rem;
+        padding: 5px 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .footer-logo {
+        font-size: 2.2rem;
+    }
+    .footer-subtitle {
+        font-size: 0.9rem;
+    }
+}
